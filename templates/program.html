@@ -1,0 +1,86 @@
+$def with (status, curUser, content)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NetFPGA</title>
+<style type="text/css">
+<!--
+.PageTitle {
+	font-size: 3em;
+	color: #FFFFFF;
+	font-family: "Times New Roman", Times, serif;
+}
+.Status {
+	color: #00FF00;
+	font-size: 1.1em;
+	font-family:  "Courier New", Courier, monospace;
+}
+body {
+	background-color: #E5ECF3;
+}
+.Content {font-family: "Courier New", Courier, monospace}
+.CurrentTitle {
+	font-size: 2em;
+	font-family: "Times New Roman", Times, serif;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="760" border="0" align="center" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0">
+      <tr>
+        <td width="3%" bgcolor="005889">&nbsp;</td>
+        <td width="67%" bgcolor="005889"><span class="PageTitle">NetFPGA</span></td>
+        <td width="30%" align="center" bgcolor="#004195"><a href="/"><span class="Status">STATUS:&nbsp;$(status)</span></a></td>
+        </tr>
+    </table>
+      <table width="100%" border="0">
+        <tr>
+          <td align="center"><table width="90%" border="0">
+              <tr>
+                <td colspan="7">&nbsp;</td>
+              </tr>
+              <tr>
+                <td colspan="7"><span class="CurrentTitle">Programming FPGA </span></td>
+              </tr>
+              <tr>
+                <td colspan="7" class="Content"> <p>
+$ lines = content.splitlines()
+$for i in lines
+	$i<br>
+$pass
+                </p></td>
+              </tr>
+$if curUser:
+              <tr>
+                <td colspan="7">&nbsp;</td>
+              </tr>
+              <tr>
+                <td width="15%" align="left"><a href="/upload">Upload</a></td>
+                <td width="5%">&nbsp;</td>
+                <td width="30%" align="center"><a href="/giveup">Give Up</a></td>
+                <td width="30%" align="center"><a href="/nav">Navigator</a></td>
+                <td width="20%" align="right"><a href="/startserver"><strong>Start Server</strong></a></td>
+              </tr>
+$pass
+              <tr>
+                <td colspan="7">&nbsp;</td>
+              </tr>
+          </table>
+            <table width="100%" border="0">
+              <tr>
+                <td align="center">Shengye Wang All Rights Reserved </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
